@@ -32,34 +32,13 @@ db.update(set_values='col1="new_value"', conditions='col2="value2"')
 db.delete(where='col1="new_value"')
 ```
 
-## 函式說明
-__init__()
-建立與資料庫的連線，並設定預設的資料表名稱。
+## 資料庫設定
+此專案使用 property_helper 模組來獲取資料庫設定。在 system.ini 檔案中，您可以設定以下屬性：
 
-set_table(table_name)
-設定要使用的資料表名稱。
+host: 資料庫主機名稱或 IP 位址。
+user: 資料庫使用者名稱。
+password: 資料庫使用者密碼。
+db: 資料庫名稱。
 
-table_name: 資料表名稱。
-insert(**kwargs)
-新增一筆資料。
-
-**kwargs: 新增的資料，以欄位名稱與值的鍵值對(Key-Value Pairs)形式提供。
-select(columns='*', where='', order_by='', limit='', fetchone=False)
-查詢符合條件的資料。
-
-columns: 要查詢的欄位名稱，以逗號分隔。預設值為所有欄位(*)。
-where: 查詢條件，以 SQL WHERE 語法提供。預設值為空字串('')。
-order_by: 查詢排序方式，以 SQL ORDER BY 語法提供。預設值為空字串('')。
-limit: 查詢筆數限制，以 SQL LIMIT 語法提供。預設值為空字串('')。
-fetchone: 是否只回傳一筆資料。預設值為 False。
-update(set_values, conditions=None)
-更新符合條件的資料。
-
-set_values: 要更新的欄位與值，以 SQL SET 語法提供。
-conditions: 更新條件，以 SQL WHERE 語法提供。預設值為 None。
-delete(where=None)
-刪除符合條件的資料。
-
-where: 刪除條件，以 SQL WHERE 語法提供。預設值為 None。
-__del__()
-關閉與資料庫的連線。
+## 結論
+Database 類別提供了簡單易用的介面，讓使用者可以輕鬆地進行資料庫操作。
