@@ -39,10 +39,10 @@ class Database:
         else:
             return self.cur.fetchall()
 
-    def update(self, set_values, conditions=None):
+    def update(self, set_values, where=None):
         query = f"UPDATE {self.table_name} SET {set_values}"
-        if conditions is not None:
-            query += f" WHERE {conditions}"
+        if where is not None:
+            query += f" WHERE {where}"
         self.cur.execute(query)
         self.conn.commit()
 
@@ -74,10 +74,10 @@ class Database:
 #     print(row)
 
 # 3-3.update 參數的 set_values 是要更改的欄位跟值 where 是條件
-# db.update(set_values="age=35", where="name='John'")
+# db.update(set_values="age=80", where="name='John'")
 
 # 3-4.delete 參數的 where是條件
-# db.delete(where="age < 25")
+# db.delete(where="age = 80")
 
 # 4.關閉資料庫連線
 # del db
