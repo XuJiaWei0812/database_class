@@ -36,8 +36,11 @@ db.delete(where='col1="new_value"')
 此專案使用 property_helper 模組來獲取資料庫設定。在 system.ini 檔案中，您可以設定以下屬性：
 
 host: 資料庫主機名稱或 IP 位址。
+
 user: 資料庫使用者名稱。
+
 password: 資料庫使用者密碼。
+
 db: 資料庫名稱。
 
 ## 結論
