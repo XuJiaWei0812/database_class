@@ -26,7 +26,7 @@ db.insert(col1='value1', col2='value2')
 result = db.select(where='col1="value1"')
 
 # 更新資料
-db.update(set_values='col1="new_value"', conditions='col2="value2"')
+db.update(set_values='col1="new_value"', where='col2="value2"')
 
 # 刪除資料
 db.delete(where='col1="new_value"')
