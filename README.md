@@ -11,7 +11,7 @@ pymysql 模組
 ## 使用方法
 ```python
 # 創建 Database 類別實例
-db = Database()
+db = dbc.Database()
 
 # 設定使用的資料表名稱
 db.set_table('table_name')
