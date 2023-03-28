@@ -30,7 +30,7 @@ db.delete(where='col1="new_value"')
 ```
 
 ## 資料庫設定
-此專案使用 property_helper 模組來獲取資料庫設定。在 system.ini 檔案中，您可以設定以下屬性：
+此專案使用 configparser 模組來獲取資料庫設定。在 system.ini 檔案中，您可以設定以下屬性：
 
 host: 資料庫主機名稱或 IP 位址。
 
