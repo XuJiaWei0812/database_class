@@ -1,7 +1,7 @@
 # 示範案例 select
-import dbc
+import pydbc
 
-db = dbc.Database()
+db = pydbc.Database()
 
 db.set_table('test_table')
 
